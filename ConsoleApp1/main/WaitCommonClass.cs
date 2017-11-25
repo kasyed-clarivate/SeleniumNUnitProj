@@ -7,7 +7,7 @@ using System.Text;
 
 namespace SeleniumNUnitProj.main
 {
-    class WaitCommonClass
+   public class WaitCommonClass
     {   private static int WAiT_TIME=2;
 
         public IWebElement WaitElementToBeVisible(IWebDriver driver, By by)

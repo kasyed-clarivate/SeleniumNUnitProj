@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SeleniumNUnitProj.main
 {
-    class Helper
+   public class Helper
     {
         IWebDriver driver;
         public Helper(IWebDriver driver) {

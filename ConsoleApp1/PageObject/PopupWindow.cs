@@ -7,7 +7,7 @@ using System.Text;
 namespace SeleniumNUnitProj.PageObject
 {
 
-    class PopupWindow : WaitCommonClass
+    public class PopupWindow : WaitCommonClass
     {
         private IWebDriver driver;
 

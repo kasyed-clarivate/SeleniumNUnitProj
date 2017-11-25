@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SeleniumNUnitProj.PageObject
 {
-    class MainPage : WaitCommonClass
+   public class MainPage : WaitCommonClass
     {
         private IWebDriver driver;
 

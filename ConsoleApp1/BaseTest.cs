@@ -9,14 +9,27 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace SeleniumNUnitProj
-{   
-    class BaseTest
+{   public enum BrowserType {
+        Firefox,
+        Chrome
+    }
+    [TestFixture]
+    public class BaseTest
     {
         public IWebDriver driver;
         public LoginPage loginPage;
         public MainPage mainPage;
         public PopupWindow popupWindow;
         public Helper helper;
+        private BrowserType _browserType;
+
+        public BaseTest() {
+            _browserType = BrowserType.Chrome;
+        }
+        public BaseTest(BrowserType browserType)
+        {
+            _browserType = BrowserType.Chrome;
+        }
 
         [OneTimeSetUp]
         public void OneTimeSettingUp()
@@ -30,11 +43,12 @@ namespace SeleniumNUnitProj
             loginPage = new LoginPage(driver);
             popupWindow = new PopupWindow(driver);
         }
+
         [SetUp]
         public void SettingUp()
         {
             Console.WriteLine("Setting Up...!");
-            driver.Manage().Cookies.DeleteAllCookies();
+           // driver.Manage().Cookies.DeleteAllCookies();
         }
 
         [TearDown]
