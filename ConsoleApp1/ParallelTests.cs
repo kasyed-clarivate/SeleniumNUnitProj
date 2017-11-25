@@ -31,7 +31,7 @@ namespace SeleniumNUnitProj
     [Parallelizable]
     public class ChromeTests : BaseTest
     {
-        public ChromeTests() : base(BrowserType.Chrome)
+        public ChromeTests() : base(BrowserType.ChromeHeadless)
         {
         }
 
